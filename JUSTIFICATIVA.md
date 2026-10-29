@@ -2,7 +2,6 @@
 
 **Disciplina:** Estrutura de Dados II — Engenharia de Software (SENAI)
 **Professor:** Luciano Lima
-**Aluno:**  — Matrícula 2731534
 
 | Aluno | Matrícula |
 |---|---|
