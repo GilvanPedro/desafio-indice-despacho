@@ -2,7 +2,11 @@
 
 **Disciplina:** Estrutura de Dados II — Engenharia de Software (SENAI)
 **Professor:** Luciano Lima
-**Aluno:** Gilvan Pedro de Castro Melo Campos — Matrícula 2731534
+**Aluno:**  — Matrícula 2731534
+
+| Aluno | Matrícula |
+|---|---|
+| Gilvan Pedro de Castro Melo Campos | 2731534 |
 
 ---
 
