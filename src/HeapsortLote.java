@@ -1,22 +1,12 @@
-/**
- * Parte 2: fechamento do lote com heapsort.
- *
- * Objetivo: ordenar o vetor de pedidos por prioridade DECRESCENTE
- * (mais urgente na posicao 0).
- *
- * Truque: o heapsort classico usa um heap de maximo e gera ordem
- * crescente (o maior vai para o fim). Como queremos ordem decrescente,
- * usamos um heap de MINIMO de prioridade: a cada passo o pedido menos
- * prioritario sai da raiz e vai para o fim do vetor. No final, o vetor
- * fica do mais prioritario para o menos prioritario.
- *
- * Bonus que conecta com a Parte 3: um vetor ordenado em ordem
- * decrescente JA E um heap de maximo valido, porque para todo i,
- * a[i] vem antes de a[2i+1] e a[2i+2] na ordenacao. Ou seja, o
- * resultado do heapsort vira a fila de despacho sem reconstrucao.
- *
- * Complexidade: O(n log n) tempo, O(1) memoria extra (in-place).
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
  */
+
 public final class HeapsortLote {
 
     private HeapsortLote() { }
