@@ -1,13 +1,12 @@
-/**
- * Um pedido da esteira de despacho.
- *
- * Alem do id e da urgencia, cada pedido carrega um numero de chegada
- * (ordem global em que entrou no sistema). Ele serve de criterio de
- * desempate: entre dois pedidos com a mesma urgencia, quem chegou
- * primeiro e despachado primeiro (FIFO). Isso deixa a ordem total e
- * deterministica, mesmo com heapsort (que nao e estavel) e com pedidos
- * novos empatando com pedidos do lote.
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
  */
+
 public class Pedido {
     private final String id;
     private final int urgencia;   // 1 a 10, 10 = mais urgente
