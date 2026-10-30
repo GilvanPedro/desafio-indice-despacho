@@ -1,11 +1,3 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - [Nome completo 1] - [Matricula]
- *   - [Nome completo 2] - [Matricula]
- *   - [Nome completo 3] - [Matricula]
- */
-
 /**
  * Um pedido da esteira de despacho.
  *
