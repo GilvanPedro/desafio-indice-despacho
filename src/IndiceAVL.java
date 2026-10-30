@@ -1,16 +1,15 @@
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Parte 4: indice de produtos por SKU usando arvore AVL.
- *
- * Escolhemos AVL porque o indice e dominado por buscas (ver ficha de
- * decisao). A AVL mantem |altura(esq) - altura(dir)| <= 1 em todo no,
- * o que limita a altura a ~1,44 log2(n), contra ~2 log2(n) da
- * rubro-negra. Menos niveis = menos comparacoes por busca.
- *
- * Operacoes: inserir, buscar e remover, todas O(log n) no pior caso.
- */
 public class IndiceAVL {
 
     private static final class No {
