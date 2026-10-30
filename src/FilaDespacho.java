@@ -1,23 +1,9 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 import java.util.Arrays;
-
 public class FilaDespacho {
 
     private Pedido[] heap;
     private int tamanho;
 
-    /**
-     * Cria a fila a partir do lote JA ORDENADO pelo heapsort.
-     * Verifica a propriedade de heap para garantir que o contrato entre a Parte 2 e a Parte 3 foi respeitado.
-     */
     public FilaDespacho(Pedido[] loteOrdenadoDecrescente) {
         this.tamanho = loteOrdenadoDecrescente.length;
         int capacidade = Math.max(16, tamanho * 2);
@@ -37,7 +23,7 @@ public class FilaDespacho {
         return heap[0];
     }
 
-    /** Insere um novo pedido urgente sem reprocessar o lote. O(log n). */
+    //Insere um novo pedido urgente sem reprocessar o lote.
     public void inserir(Pedido p) {
         if (tamanho == heap.length) {
             heap = Arrays.copyOf(heap, heap.length * 2);
@@ -47,7 +33,7 @@ public class FilaDespacho {
         tamanho++;
     }
 
-    /** Remove e devolve o pedido de maior prioridade. O(log n). */
+    // Remove e devolve o pedido de maior prioridade.
     public Pedido removerMaximo() {
         if (estaVazia()) throw new IllegalStateException("Fila vazia");
         Pedido topo = heap[0];
@@ -96,7 +82,7 @@ public class FilaDespacho {
         heap[b] = t;
     }
 
-    /** Confere se nenhum filho tem prioridade sobre o pai. O(n). */
+    // Confere se nenhum filho tem prioridade sobre o pai.
     public boolean propriedadeDeHeapValida() {
         for (int i = 1; i < tamanho; i++) {
             int pai = (i - 1) / 2;
@@ -107,7 +93,7 @@ public class FilaDespacho {
         return true;
     }
 
-    /** Visualizacao do array interno (ordem de heap, nao de despacho). */
+    // Visualizacao do array interno (ordem de heap, nao de despacho).
     public String estadoInterno() {
         return Arrays.toString(Arrays.copyOf(heap, tamanho));
     }

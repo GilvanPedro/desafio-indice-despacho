@@ -1,12 +1,3 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 public class Pedido {
     private final String id;
     private final int urgencia;   // 1 a 10, 10 = mais urgente
@@ -25,10 +16,7 @@ public class Pedido {
     public int getUrgencia() { return urgencia; }
     public long getChegada() { return chegada; }
 
-    /**
-     * Retorna true se este pedido deve ser despachado ANTES do outro.
-     * Regra: maior urgencia primeiro; empate -> quem chegou antes.
-     */
+    //Retorna true se o pedido verificado deve ser despachado ANTES do outro.
     public boolean temPrioridadeSobre(Pedido outro) {
         if (this.urgencia != outro.urgencia) {
             return this.urgencia > outro.urgencia;

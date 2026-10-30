@@ -1,12 +1,3 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,18 +17,14 @@ public class IndiceAVL {
 
     private No raiz;
     private int tamanho;
-    private int rotacoes; // contador didatico
+    private int rotacoes;
 
-    // ---------------------------------------------------------------
-    // API publica
-    // ---------------------------------------------------------------
-
-    /** Insere (ou atualiza a descricao, se o SKU ja existe). */
+    //Insere (ou atualiza a descricao, se o SKU ja existe).
     public void inserir(String sku, String descricao) {
         raiz = inserir(raiz, sku, descricao);
     }
 
-    /** Busca por SKU. Retorna a descricao, ou null se nao existir. */
+    //Busca por SKU. Retorna a descricao, ou null se nao existir.
     public String buscar(String sku) {
         No atual = raiz;
         while (atual != null) {
@@ -52,7 +39,7 @@ public class IndiceAVL {
         return buscar(sku) != null;
     }
 
-    /** Remove um SKU do catalogo. Retorna true se removeu. */
+    // Remove um SKU do catalogo. Retorna true se removeu.
     public boolean remover(String sku) {
         int antes = tamanho;
         raiz = remover(raiz, sku);
@@ -63,28 +50,24 @@ public class IndiceAVL {
     public int altura() { return h(raiz); }
     public int totalRotacoes() { return rotacoes; }
 
-    /** SKUs em ordem (percurso em-ordem). */
+    //Coloca os SKUs em ordem (percurso em-ordem).
     public List<String> emOrdem() {
         List<String> out = new ArrayList<>();
         emOrdem(raiz, out);
         return out;
     }
 
-    /** Verifica as invariantes da AVL e da BST. */
+    //Verifica as invariantes da AVL e da BST.
     public boolean estaBalanceada() {
         return verificar(raiz, null, null) >= 0;
     }
 
-    /** Desenho da arvore deitada (raiz a esquerda). */
+    // Desenho da arvore deitada (raiz a esquerda)
     public String desenhar() {
         StringBuilder sb = new StringBuilder();
         desenhar(raiz, "", sb);
         return sb.toString();
     }
-
-    // ---------------------------------------------------------------
-    // Implementacao
-    // ---------------------------------------------------------------
 
     private No inserir(No no, String sku, String descricao) {
         if (no == null) {
@@ -115,12 +98,12 @@ public class IndiceAVL {
                 tamanho--;
                 return (no.esq != null) ? no.esq : no.dir;
             }
-            // Dois filhos: troca pelo sucessor (menor da subarvore direita).
+
             No suc = no.dir;
             while (suc.esq != null) suc = suc.esq;
             No novo = new No(suc.sku, suc.descricao);
             novo.esq = no.esq;
-            novo.dir = remover(no.dir, suc.sku); // decrementa tamanho
+            novo.dir = remover(no.dir, suc.sku);
             no = novo;
         }
         return balancear(no);
@@ -130,17 +113,21 @@ public class IndiceAVL {
         atualizarAltura(no);
         int fb = fatorBalanceamento(no);
 
-        if (fb > 1) {                       // pesado a esquerda
+        if (fb > 1) {
             if (fatorBalanceamento(no.esq) < 0) {
-                no.esq = rotacaoEsquerda(no.esq);   // caso LR
+                //Caso for LR
+                no.esq = rotacaoEsquerda(no.esq);
             }
-            return rotacaoDireita(no);              // caso LL
+            //Caso for LL
+            return rotacaoDireita(no);
         }
-        if (fb < -1) {                      // pesado a direita
+        if (fb < -1) {
             if (fatorBalanceamento(no.dir) > 0) {
-                no.dir = rotacaoDireita(no.dir);    // caso RL
+                //Caso for RL
+                no.dir = rotacaoDireita(no.dir);
             }
-            return rotacaoEsquerda(no);             // caso RR
+            //Caso for RR
+            return rotacaoEsquerda(no);
         }
         return no;
     }
@@ -182,7 +169,7 @@ public class IndiceAVL {
         emOrdem(no.dir, out);
     }
 
-    /** Retorna a altura se ok, ou -1 se alguma invariante quebrou. */
+    // Retorna a altura se ok, ou -1 se alguma invariante quebrou.
     private static int verificar(No no, String min, String max) {
         if (no == null) return 0;
         if (min != null && no.sku.compareTo(min) <= 0) return -1;

@@ -1,18 +1,9 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("=== PARTE 4: INDICE DE PRODUTOS (AVL) ===");
+        System.out.println("=== INDICE DE PRODUTOS (AVL) ===");
         String[] skus = {
             "SKU-3010", "SKU-1045", "SKU-5520", "SKU-2230", "SKU-4190",
             "SKU-1800", "SKU-6005", "SKU-2990", "SKU-3770", "SKU-4450"
@@ -35,7 +26,7 @@ public class Main {
         }
 
         System.out.println();
-        System.out.println("=== PARTE 2: FECHAMENTO DO LOTE (HEAPSORT) ===");
+        System.out.println("=== FECHAMENTO DO LOTE (HEAPSORT) ===");
         long chegada = 0;
         Pedido[] lote = {
             new Pedido("P101", 6, chegada++), new Pedido("P102", 9, chegada++),
@@ -49,7 +40,7 @@ public class Main {
         System.out.println("Lote ordenado:  " + Arrays.toString(lote));
 
         System.out.println();
-        System.out.println("=== PARTE 3: FILA DE DESPACHO POS-FECHAMENTO ===");
+        System.out.println("=== FILA DE DESPACHO POS-FECHAMENTO ===");
         FilaDespacho fila = new FilaDespacho(lote); // nasce do heapsort, sem heapify
         System.out.println("Fila criada a partir do vetor ordenado. Heap valido: "
                 + fila.propriedadeDeHeapValida());

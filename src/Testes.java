@@ -1,12 +1,3 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -34,7 +25,6 @@ public class Testes {
         if (falhou > 0) System.exit(1);
     }
 
-    // --------------------------------------------------------------
     private static void testeIndiceDataset() {
         String[] skus = {
             "SKU-3010", "SKU-1045", "SKU-5520", "SKU-2230", "SKU-4190",
@@ -92,7 +82,6 @@ public class Testes {
         verificar("indice: altura dentro do limite AVL (~1,44 log n)", idx.altura() <= limite);
     }
 
-    // --------------------------------------------------------------
     private static Pedido[] loteDataset() {
         long c = 0;
         return new Pedido[] {
@@ -192,7 +181,6 @@ public class Testes {
         verificar("fila: 100 cenarios aleatorios removem sempre o mais prioritario", ok);
     }
 
-    // --------------------------------------------------------------
     private static void verificar(String nome, boolean condicao) {
         if (condicao) {
             passou++;

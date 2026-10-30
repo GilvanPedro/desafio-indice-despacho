@@ -1,12 +1,3 @@
-/*
- * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
- * Integrantes do grupo:
- *   - Gilvan Pedro de Castro Melo Campos (2731534)
- *   - João Paulo Marques Ferreira (2759688)
- *   - João Pedro Martini Denani (2758712)
- *   - Sidney Emanuel Barbosa de Oliveira (2759803)
- */
-
 public final class HeapsortLote {
 
     private HeapsortLote() { }
@@ -14,22 +5,18 @@ public final class HeapsortLote {
     public static void ordenarPorPrioridadeDecrescente(Pedido[] v) {
         int n = v.length;
 
-        // 1) Constroi o heap de minimo de prioridade (bottom-up, O(n)).
+        //Responsável por construir o heap de minimo de prioridade.
         for (int i = n / 2 - 1; i >= 0; i--) {
             descer(v, i, n);
         }
 
-        // 2) Extrai o menos prioritario e joga para o fim, n-1 vezes.
+        //Responsável por extrair o menor prioritario e joga para o fim.
         for (int fim = n - 1; fim > 0; fim--) {
             trocar(v, 0, fim);
             descer(v, 0, fim);
         }
     }
 
-    /**
-     * Sift-down no heap de minimo de prioridade: o pai precisa ser
-     * MENOS prioritario (ou igual) que os filhos.
-     */
     private static void descer(Pedido[] v, int i, int tamanho) {
         while (true) {
             int esq = 2 * i + 1;
