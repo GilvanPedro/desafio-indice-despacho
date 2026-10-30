@@ -1,20 +1,14 @@
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
+ */
+
 import java.util.Arrays;
 
-/**
- * Parte 3: fila de despacho pos-fechamento (heap de maximo).
- *
- * A fila NASCE do vetor que saiu do heapsort da Parte 2. Como esse
- * vetor esta em ordem decrescente de prioridade, ele ja satisfaz a
- * propriedade de heap de maximo (pai >= filhos). Entao o construtor
- * apenas adota o vetor: nenhum heapify, nenhuma reconstrucao.
- * Custo da "conversao": O(1) se adotarmos o vetor, O(n) se copiarmos
- * para um array com folga (que e o que fazemos aqui, para crescer).
- *
- * Operacoes:
- *   inserir       -> O(log n)  (sift-up)
- *   removerMaximo -> O(log n)  (sift-down)
- *   espiar        -> O(1)
- */
 public class FilaDespacho {
 
     private Pedido[] heap;
@@ -22,8 +16,7 @@ public class FilaDespacho {
 
     /**
      * Cria a fila a partir do lote JA ORDENADO pelo heapsort.
-     * Verifica a propriedade de heap para garantir que o contrato
-     * entre a Parte 2 e a Parte 3 foi respeitado.
+     * Verifica a propriedade de heap para garantir que o contrato entre a Parte 2 e a Parte 3 foi respeitado.
      */
     public FilaDespacho(Pedido[] loteOrdenadoDecrescente) {
         this.tamanho = loteOrdenadoDecrescente.length;
