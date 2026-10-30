@@ -15,3 +15,9 @@ Compilar e rodar (Java 11+):
     javac -d out src/*.java
     java -cp out Main
     java -cp out Testes
+
+## Integrantes do grupo:
+- Gilvan Pedro de Castro Melo Campos (2731534)
+- João Paulo Marques Ferreira (2759688)
+- João Pedro Martini Denani (2758712)
+- Sidney Emanuel Barbosa de Oliveira (2759803)
