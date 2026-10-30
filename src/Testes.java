@@ -1,15 +1,18 @@
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.TreeMap;
 
-/**
- * Testes automatizados sem dependencias externas (nao precisa de JUnit).
- * Rodar: java -cp out Testes
- * Cada teste corresponde a um "criterio de pronto" do enunciado,
- * mais testes aleatorios de estresse.
- */
 public class Testes {
 
     private static int passou = 0;
