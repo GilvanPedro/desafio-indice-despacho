@@ -1,11 +1,14 @@
+/*
+ * Desafio: Indice e Despacho Integrados - Estrutura de Dados II
+ * Integrantes do grupo:
+ *   - Gilvan Pedro de Castro Melo Campos (2731534)
+ *   - João Paulo Marques Ferreira (2759688)
+ *   - João Pedro Martini Denani (2758712)
+ *   - Sidney Emanuel Barbosa de Oliveira (2759803)
+ */
+
 import java.util.Arrays;
 
-/**
- * Demonstracao ponta a ponta com o dataset do enunciado:
- *   Parte 4 -> indice AVL de produtos
- *   Parte 2 -> heapsort do lote
- *   Parte 3 -> fila de despacho nascida do heapsort + pedidos novos
- */
 public class Main {
 
     public static void main(String[] args) {
