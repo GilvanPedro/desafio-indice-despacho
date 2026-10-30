@@ -1,3 +1,11 @@
+/*
+ * Integrantes do grupo:
+ *  - Gilvan Pedro de Castro Melo Campos (2731534)
+ *  - João Paulo Marques Ferreira (2759688)
+ *  - João Pedro Martini Denani (2758712)
+ *  - Sidney Emanuel Barbosa de Oliveira (2759803)
+ */
+
 public class Pedido {
     private final String id;
     private final int urgencia;   // 1 a 10, 10 = mais urgente
