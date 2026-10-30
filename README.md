@@ -1,6 +1,6 @@
 # Desafio: Índice e Despacho Integrados (Estrutura de Dados II)
 
-Integrantes: ver cabeçalho dos arquivos `.java` e `JUSTIFICATIVA.md`.
+Integrantes: ver cabeçalho dos arquivos `.java` e `Desafio_ índice e despacho integrados.docx`.
 
 - `src/IndiceAVL.java`     Parte 4: índice de produtos por SKU (AVL)
 - `src/HeapsortLote.java`  Parte 2: heapsort do lote (ordem decrescente)
